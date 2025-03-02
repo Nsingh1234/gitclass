@@ -1,17 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name:  backend
   labels:
     app: app
     tier: backend
-    track: latest
+    track:  latest
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app
+      app: appgit remote -v
+
       tier: backend
       track: latest
   strategy:
@@ -27,10 +28,9 @@ spec:
         track: latest
     spec:
       containers:
-        - image: (ommited)
+        - image: (ommite)
           imagePullPolicy: IfNotPresent
-          name: app
-          resources: {}
+                    resources: {}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 80e
